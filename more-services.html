@@ -57,8 +57,7 @@
   <link rel="icon" type="image/png" href="images/logo.png">
   <link rel="manifest" href="site.webmanifest">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -67,18 +66,18 @@
 
 <header>
   <a href="index.html" class="logo">
-    <img src="images/logo.png" alt="Marketmore logo — AI automation company">
+    <img src="images/logo.webp" alt="Marketmore logo — AI automation company" width="180" height="135">
     <span class="logo-text">Marketmore</span>
   </a>
   <nav>
     <a href="index.html">AI for Business</a>
     <a href="our-solutions.html">Our Solutions</a>
-    <a href="more-services.html" class="active">More services</a>
+    <a href="more-services.html" class="active" aria-current="page">More services</a>
     <a href="contact.html">Contact</a>
   </nav>
 </header>
 
-<main id="main-content">
+<main id="main-content" tabindex="-1">
 
 <h1>More Services</h1>
 

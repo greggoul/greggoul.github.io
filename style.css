@@ -10,6 +10,15 @@
   --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
+/* Self-hosted Inter font (variable, weights 400-700) */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('fonts/inter-latin.woff2') format('woff2');
+}
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
@@ -27,6 +36,17 @@ a:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
   border-radius: 2px;
+}
+
+/* Focus fallback for older browsers */
+a:focus {
+  outline: 1px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Skip link focus bug fix */
+#main-content:focus {
+  outline: none;
 }
 
 /* Skip navigation link */
@@ -233,10 +253,7 @@ strong {
   outline-offset: 2px;
 }
 
-/* Prevent horizontal overflow */
-html {
-  overflow-x: hidden;
-}
+
 
 img {
   max-width: 100%;
