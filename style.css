@@ -1,6 +1,6 @@
 /* marketmore.org — base styles */
 :root {
-  --accent: #5bc0be;
+  --accent: #247d7b;
   --text: #2d3436;
   --text-light: #636e72;
   --bg: #ffffff;
@@ -23,6 +23,30 @@ body {
 
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Skip navigation link */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  z-index: 1000;
+  padding: 8px 16px;
+  background: var(--text);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 8px;
+}
 
 /* Header */
 header {
