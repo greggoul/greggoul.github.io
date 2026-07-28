@@ -1,0 +1,16 @@
+{
+  "name": "Market More FZCO",
+  "short_name": "Marketmore",
+  "description": "AI chatbots, automation, and business consulting",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#5bc0be",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "images/logo.png",
+      "sizes": "any",
+      "type": "image/png"
+    }
+  ]
+}

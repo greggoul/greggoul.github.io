@@ -1,0 +1,267 @@
+/* marketmore.org — base styles */
+:root {
+  --accent: #5bc0be;
+  --text: #2d3436;
+  --text-light: #636e72;
+  --bg: #ffffff;
+  --bg-light: #f8f9fa;
+  --border: #e9ecef;
+  --max-width: 800px;
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: var(--font);
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.7;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+.logo-text {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--text-light);
+  text-transform: uppercase;
+}
+
+nav {
+  display: flex;
+  gap: 28px;
+}
+
+nav a {
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  padding-bottom: 2px;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+}
+
+/* Main content */
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 40px 40px 80px;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 24px;
+  color: var(--text);
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--accent);
+  margin-top: 40px;
+  margin-bottom: 16px;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+p {
+  margin-bottom: 16px;
+  color: var(--text);
+}
+
+strong {
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* CTA section */
+.cta-section {
+  text-align: center;
+  padding: 48px 24px;
+  margin-top: 48px;
+  border-top: 1px solid var(--border);
+}
+
+.cta-section h2 {
+  margin-top: 0;
+  font-size: 20px;
+  color: var(--text);
+}
+
+.cta-section .email-link {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 12px 32px;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 15px;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.cta-section .email-link:hover {
+  opacity: 0.9;
+  text-decoration: none;
+}
+
+.cta-note {
+  font-size: 13px;
+  color: var(--text-light);
+  margin-top: 12px;
+}
+
+/* Contact form */
+.contact-intro {
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+.contact-email {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 32px;
+}
+
+.contact-email a {
+  color: var(--accent);
+}
+
+/* Solution cards */
+.solution {
+  margin-bottom: 48px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--border);
+}
+
+.solution:last-of-type {
+  border-bottom: none;
+}
+
+.solution .tagline {
+  font-style: italic;
+  color: var(--text-light);
+  margin-bottom: 16px;
+}
+
+.solution ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 16px;
+}
+
+.solution ul li {
+  padding: 4px 0;
+  padding-left: 20px;
+  position: relative;
+}
+
+.solution ul li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+/* Service blocks */
+.service {
+  margin-bottom: 40px;
+}
+
+.service h2 {
+  font-size: 20px;
+}
+
+.service .good-for {
+  font-size: 14px;
+  color: var(--text-light);
+  margin-top: 8px;
+}
+
+.service .good-for strong {
+  color: var(--text-light);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 24px 40px;
+  font-size: 13px;
+  color: var(--text-light);
+  border-top: 1px solid var(--border);
+}
+
+footer a {
+  color: var(--text-light);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 20px;
+  }
+
+  nav {
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  main {
+    padding: 24px 20px 60px;
+  }
+
+  h1 { font-size: 26px; }
+  h2 { font-size: 20px; }
+}
