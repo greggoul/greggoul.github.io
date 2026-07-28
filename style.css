@@ -183,6 +183,66 @@ strong {
   margin-top: 12px;
 }
 
+/* Hero CTA — above the fold */
+.hero-cta {
+  display: flex;
+  gap: 12px;
+  margin: 28px 0 36px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.hero-cta .btn-primary {
+  display: inline-block;
+  padding: 12px 28px;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.hero-cta .btn-primary:hover {
+  opacity: 0.9;
+  text-decoration: none;
+}
+
+.hero-cta .btn-secondary {
+  display: inline-block;
+  padding: 12px 28px;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.hero-cta .btn-secondary:hover {
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+}
+
+.hero-cta .btn-primary:focus-visible,
+.hero-cta .btn-secondary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Prevent horizontal overflow */
+html {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 /* Contact form */
 .contact-intro {
   font-size: 16px;
@@ -288,4 +348,14 @@ footer a {
 
   h1 { font-size: 26px; }
   h2 { font-size: 20px; }
+
+  .hero-cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-cta .btn-primary,
+  .hero-cta .btn-secondary {
+    text-align: center;
+  }
 }
